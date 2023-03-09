@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  app:
+    build: ./
+    working_dir: /opt/aries
+    volumes:
+      - ./:/opt/aries
+    tty: true
+    ports:
+      - "3000:3000"
+
+# dev
+# flutter run -d web-server --web-port=3000 --web-hostname 0.0.0.0
+
+# build
+# flutter build web
